@@ -6,16 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
-  <a href="/home"><img th:src="@{Images/icon.png}"width="35" height="40"/></a>
-  <div class="container-fluid d-flex align-items-center">
-    <h1 class="d-flex align-items-center fs-4 text-white mb-0">
-      ОБЩЕПИТЪ
-    </h1>
-
-    <a href="/logout" class="ms-auto link-light" hreflang="ar">Выйти из аккаунта</a>
-  </div>
-</header>
+<header th:insert="~{blocks/header :: header}"></header>
 <main>
   <img src="https://cdn-icons-png.flaticon.com/512/6594/6594483.png" width="500" height="500"style="float: left;">
   <p style="font-size: 50px;">Nickname</p>

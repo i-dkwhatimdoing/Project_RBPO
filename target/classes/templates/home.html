@@ -6,15 +6,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
-    <p><a href="home"><img src="https://cdn-icons-png.flaticon.com/512/6594/6594483.png" width="45" height="40"></a></p>
-    <div class="container-fluid d-flex align-items-center">
-        <h1 class="d-flex align-items-center fs-4 text-white mb-0">
-            ОБЩЕПИТЪ
-        </h1>
+<header th:insert="~{blocks/header :: header}"></header>
 
-        <a href="login" class="ms-auto link-light" hreflang="ar">Войти</a>
+<a href="/add" class="p-2 text-dark" hreflang="ar" style="margin-left: 47%; position: absolute;text-align: center;">Добавить</a>
+    <div class="container mt-5">
+        <div class="row ">
+    <div th:each="el :${services}" class="alert alert-light col-3">
+             <h3 th:text="${el.serviceName}"style="text-align: center;"></h3>
+             <h5 th:text="${el.serviceRole}"style="text-align: center;"></h5>
+             <p th:text="${el.likes}+':)'"style="text-align: center;"></p>
+        <p style="text-align: center;"><a th:href="'/service/'+${el.serviceName}">Детальнее</a></p>
     </div>
-</header>
+</div>
+    </div>
 </body>
 </html>
